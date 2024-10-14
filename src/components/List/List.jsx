@@ -2,7 +2,7 @@ const List = ({ category }) => {
     console.log(category);
   const {logo,category_name, availability}=category;
   return (
-    <div className=" bg-gray-100 shadow-xl rounded-lg pl-3 py-4">
+    <div className=" bg-gray-100 rounded-lg pl-3 py-8">
       <figure>
         <img className="border-2"
           src={logo}
