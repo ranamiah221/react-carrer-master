@@ -1,5 +1,5 @@
 const List = ({ category }) => {
-    console.log(category);
+    // console.log(category);
   const {logo,category_name, availability}=category;
   return (
     <div className=" bg-gray-100 rounded-lg pl-3 py-8">

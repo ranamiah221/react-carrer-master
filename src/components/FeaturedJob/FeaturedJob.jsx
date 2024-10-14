@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const FeaturedJob = ({ featuredJob }) => {
-  console.log(featuredJob);
+//   console.log(featuredJob);
   const {
     id,
     logo,
@@ -13,7 +13,7 @@ const FeaturedJob = ({ featuredJob }) => {
     remote_or_onsite,
     salary,
     job_type,
-    location,
+    location
   } = featuredJob;
   return (
     <div className="border-2 pl-8 py-14">

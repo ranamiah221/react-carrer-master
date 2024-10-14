@@ -6,6 +6,7 @@ import { MdMarkEmailUnread } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../utillity/localstorage";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -13,6 +14,7 @@ const JobDetails = () => {
   const idInt = parseInt(id);
   const job = jobs.find((job) => job.id === idInt);
   const handleApplyJob=()=>{
+    saveJobApplication(idInt)
     toast('Applied job successfully')
   }
   const {
@@ -29,6 +31,7 @@ const JobDetails = () => {
 
   return (
     <>
+    {/* job details page banner */}
       <div className="bg-[url('https://i.ibb.co.com/RQfLhP8/bg1.png')] bg-cover bg-center h-64 w-full flex items-center justify-center">
         <h2 className="text-4xl font-bold">Job Details</h2>
       </div>
