@@ -4,11 +4,17 @@ import { FaJoomla } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const JobDetails = () => {
   const jobs = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
   const job = jobs.find((job) => job.id === idInt);
+  const handleApplyJob=()=>{
+    toast('Applied job successfully')
+  }
   const {
     job_description,
     job_responsibility,
@@ -19,6 +25,8 @@ const JobDetails = () => {
     contact_information,
   } = job;
   const { address, email, phone } = contact_information;
+ 
+
   return (
     <>
       <div className="bg-[url('https://i.ibb.co.com/RQfLhP8/bg1.png')] bg-cover bg-center h-64 w-full flex items-center justify-center">
@@ -118,10 +126,11 @@ const JobDetails = () => {
             </div>
           </div>
           {/* apply now button */}
-          <button className="w-full btn text-white bg-blue-500 hover:bg-green-500 mt-5">
+          <button onClick={handleApplyJob} className="w-full btn text-white bg-blue-500 hover:bg-green-500 mt-5">
             Apply Now
           </button>
         </div>
+        <ToastContainer />
       </div>
     </>
   );

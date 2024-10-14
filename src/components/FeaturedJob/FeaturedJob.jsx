@@ -1,6 +1,8 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { LuBadgeDollarSign } from "react-icons/lu";
 import { Link } from "react-router-dom";
+
+
 const FeaturedJob = ({ featuredJob }) => {
   console.log(featuredJob);
   const {
