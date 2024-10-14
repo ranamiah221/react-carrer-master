@@ -1,8 +1,10 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { LuBadgeDollarSign } from "react-icons/lu";
+import { Link } from "react-router-dom";
 const FeaturedJob = ({ featuredJob }) => {
   console.log(featuredJob);
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -35,7 +37,9 @@ const FeaturedJob = ({ featuredJob }) => {
                  <p>{salary}</p>
             </div>
         </div>
-        <button className="btn text-white bg-blue-500 hover:bg-green-500">View Details</button>
+        <Link to={`/jobs/${id}`}>
+        <button className="btn text-white bg-blue-500 hover:bg-green-500">View Details</button> 
+        </Link>
     </div>
   );
 };
