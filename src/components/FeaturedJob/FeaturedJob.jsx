@@ -10,7 +10,6 @@ const FeaturedJob = ({ featuredJob }) => {
     salary,
     job_type,
     location,
-    experiences,
   } = featuredJob;
   return (
     <div className="border-2 pl-8 py-14">
@@ -23,8 +22,8 @@ const FeaturedJob = ({ featuredJob }) => {
         <h2 className="text-xl font-bold mt-5">{job_title}</h2>
         <p className="text-base font-normal text-gray-500">{company_name}</p>
          <div className="mt-3">
-            <button className="btn btn-outline mr-5">{remote_or_onsite}</button>
-            <button className="btn btn-outline">{job_type}</button>
+            <button className="btn btn-outline mr-5 text-blue-500 hover:bg-gray-200 hover:text-black">{remote_or_onsite}</button>
+            <button className="btn btn-outline text-blue-500 hover:bg-gray-200 hover:text-black">{job_type}</button>
         </div>
         <div className="flex items-center mt-2 mb-3">
             <div className="flex items-center mr-10">
